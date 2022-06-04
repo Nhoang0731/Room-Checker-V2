@@ -1,0 +1,12 @@
+Filter('Meeting Rooms', 
+(IsBlank(SearchRoomName) || SearchRoomName.Value in Name) 
+&& (IsBlank(Value(SearchRoomCapacity.Value)) ||  'Room Capacity' >= Value(SearchRoomCapacity.Value))
+&& (IsBlank(SearchRoomDepartment.Selected.Value) || SearchRoomDepartment.Selected.Value in Department.Value) 
+&& (IsBlank(SearchRoomBuilding.Selected.Value) || SearchRoomBuilding.Selected.Value in Building.Value) 
+&& (IsBlank(SearchRoomCardReader.Selected.Value) || SearchRoomCardReader.Selected.Value = 'Card-Reader')
+&& (IsBlank(SearchRoomComputer.Selected.Value) || SearchRoomComputer.Selected.Value = Computer.)
+&& (IsBlank(SearchRoomProjector.Selected.Value) || SearchRoomProjector.Selected.Value = Projector)
+&& (IsBlank(SearchRoomDedicatedSpeak.Selected.Value) || SearchRoomDedicatedSpeak.Selected.Value = 'Dedicated Speakers')
+&& (IsBlank(SearchRoomTVSpeakers.Selected.Value) || SearchRoomTVSpeakers.Selected.Value = 'TV Speakers')
+&& (IsBlank(SearchRoomWebcam.Selected.Value) || SearchRoomWebcam.Selected.Value = 'Webcam (Mic)')
+)
